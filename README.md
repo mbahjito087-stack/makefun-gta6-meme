@@ -8,8 +8,15 @@ An epic GTA 6 meme: the make.fun ghost drives away from a Vice City explosion. D
 
 ## Run it
 
+Requires Node 24. By default it writes `/output/entry.png`; set
+`MAKEFUN_OUTPUT_DIR` to write somewhere else (for example a temp dir
+when testing locally). The program verifies the copy by comparing the
+SHA-256 hash and file size of the output against `meme.png`, and fails
+if they do not match.
+
 ```sh
 node main.ts
+MAKEFUN_OUTPUT_DIR=/tmp/gta6-test node main.ts
 ```
 
 ---
